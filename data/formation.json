@@ -1,0 +1,14 @@
+[
+    {"nom":"IPSSI",
+     "diplome":"Dev full stack",
+     "annee":"2021/2022"
+    },
+    {"nom":"INSTA",
+     "diplome":"BTS SIO",
+     "annee":"2019/2020"
+    },
+    {"nom":"LICEE TECHNIQUE",
+     "diplome":"BAC",
+     "annee":"2018/2019"
+    }
+]

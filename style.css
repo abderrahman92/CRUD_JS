@@ -1,0 +1,226 @@
+ /*css  */
+ * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background: hsl(204 100% 5%);
+}
+p,h1,body {
+    font-family: "Dank Mono", ui-monospace, monospace;
+	color: rgb(63, 125, 184);
+}
+/*css pour le texte */
+article {
+    color: aquamarine;
+    margin-top: 15%;
+    text-align: center;
+}
+section{
+	margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 8vmin;
+    line-height: 1.1;
+    font-weight: 300;
+}
+
+/*css pour le menu de navigation */
+.nav {
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.nav > .nav-header {
+    display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    color: #fff;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+    display: none;
+}
+
+.nav > .nav-links {
+    display: inline;
+    float: left;
+    font-size: 18px;
+}
+
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 25px 12px 13px 17px;
+    text-decoration: none;
+    color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+    display: none;
+}
+/*css pour le berger menu  */
+@media (max-width:600px) {
+    .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    }
+    .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    }
+    .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    }
+}
+
+
+
+/* notification css*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+ :root {
+	 font-family: "Montserrat";
+}
+
+ i {
+	 color: inherit;
+}
+ .banners-container {
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+     z-index: 100;
+}
+ .banner {
+	 color: white;
+	 font-weight: 700;
+	 padding: 2rem;
+	 display: flex;
+	 flex-direction: row;
+	 align-items: center;
+}
+ .banner .banner-message {
+	 flex: 1;
+	 padding: 0 2rem;
+}
+ .banner .banner-close {
+	 display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 padding: 0.5rem;
+	 border-radius: 4px;
+	 cursor: pointer;
+	 transition: background 0.3s;
+}
+ .banner .banner-close:hover {
+	 background: rgba(0, 0, 0, 0.12);
+}
+ .banner.success {
+	 background: #10c15c;
+}
+ .banner.success::after {
+	 background: #10c15c;
+}
+ .banner.error {
+	 background: #ed1c24;
+}
+ .banner.error::after {
+	 background: #ed1c24;
+}
+ .banner.info {
+	 background: #0b22e2;
+}
+ .banner.info::after {
+	 background: #0b22e2;
+}
+ .banner::after {
+	 content: "";
+	 position: absolute;
+	 height: 10%;
+	 width: 100%;
+	 bottom: 100%;
+	 left: 0;
+}
+ .banner:not(.visible) {
+	 display: none;
+	 transform: translateY(-100%);
+}
+ .banner.visible {
+	 box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.12);
+	 animation-name: banner-in;
+	 animation-direction: forwards;
+	 animation-duration: 0.6s;
+	 animation-timing-function: ease-in-out;
+	 animation-fill-mode: forwards;
+	 animation-iteration-count: 1;
+}
+ @keyframes banner-in {
+	 0% {
+		 transform: translateY(-100%);
+	}
+	 50% {
+		 transform: translateY(10%);
+	}
+	 100% {
+		 transform: translateY(0);
+	}
+}
+ .show-banner {
+	 appearance: none;
+	 background: #ededed;
+	 border: 0;
+	 padding: 1rem 2rem;
+	 border-radius: 4px;
+	 cursor: pointer;
+	 text-transform: uppercase;
+	 margin: 0.25rem;
+}
+/*card margin projet_administrateur*/
+.card{
+margin-bottom: 15px;
+}
